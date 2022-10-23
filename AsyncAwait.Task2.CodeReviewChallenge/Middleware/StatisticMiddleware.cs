@@ -23,7 +23,7 @@ public class StatisticMiddleware
     {
         string path = context.Request.Path;
 
-        await _statisticService.RegisterVisitAsync(path).ConfigureAwait(false);
+        await _statisticService.RegisterVisitAsync(path);
 
         context.Response.Headers.Add(
             CustomHttpHeaders.TotalPageVisits,
